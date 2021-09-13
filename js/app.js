@@ -22,7 +22,7 @@ const showProducts = (products) => {
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button id="details-btn" class="btn btn-info">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -50,20 +50,19 @@ const updatePrice = (id, value) => {
   document.getElementById(id).innerText = total.toFixed(2);
   updateTotal();
 };
-
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = value.toFixed(2);
 };
 
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
   const priceConverted = getInputValue("price");
-  if (priceConverted > 200) {
+  if (priceConverted > 200 && priceConverted <= 400) {
     setInnerText("delivery-charge", 30);
     setInnerText("total-tax", priceConverted * 0.2);
   }
-  if (priceConverted > 400) {
+  if (priceConverted > 400 && priceConverted <= 500) {
     setInnerText("delivery-charge", 50);
     setInnerText("total-tax", priceConverted * 0.3);
   }
