@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shop</title>
+  <title>modern@shop</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -15,20 +15,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2f5046badd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header></header>
-  <main class="main container">
+  <header class="main">
     <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text">
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
+      <input id="input-field" class="search-field search-box" type="text">
+      <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+        autocomplete="off" id="search-btn" onclick="loadProducts()">
+        Search
+      </button>
     </div>
+  </header>
+  <main class="main">
+
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="g-4">
