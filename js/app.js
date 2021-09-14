@@ -1,3 +1,4 @@
+// load api 
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
   fetch(url)
@@ -18,9 +19,9 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h4>${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
+      <h3>Price: $ ${product.price}</h2>
     <i class="fas fa-star "></i><i class="fas fa-star-half-alt"></i> ${product.rating.rate}  &nbsp &nbsp &nbsp<i class="fas fa-user-check"></i>${product.rating.count}
       <br>
       <br>
@@ -30,15 +31,15 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+// conut products 
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
 };
-
+// read value function
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);
