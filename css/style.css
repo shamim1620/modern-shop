@@ -16,15 +16,12 @@ body {
 }
 .search-box {
   width: 281px;
+  height: 35px;
   border-radius: 5px;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 10px;
   border-right: none;
-}
-.search-button {
-  padding: 200px 10px;
-  border-radius: 25px;
 }
 #all-products {
   display: grid;
